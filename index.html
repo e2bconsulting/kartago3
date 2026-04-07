@@ -587,8 +587,8 @@
         }
 
         .product-image {
-            height: 220px;
-            background: linear-gradient(135deg, var(--cream-dark) 0%, var(--gold-light) 100%);
+            height: 240px;
+            background: var(--cream-dark);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -596,10 +596,17 @@
             overflow: hidden;
         }
 
-        .product-image i {
-            font-size: 3.5rem;
-            color: var(--brown);
-            opacity: 0.25;
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.07);
         }
 
         .product-image-label {
@@ -1293,33 +1300,37 @@
     <!-- ========== HERO VIDEO SLIDER ========== -->
     <section class="hero">
         <div class="hero-slider">
-            <!-- Slide 1: Dates Harvest -->
+            <!-- Slide 1: Tunisian Oasis sunset — hero-bg-1.jpg -->
             <div class="hero-slide active" id="slide-0">
-                <!-- Gradient placeholder (shows until video loads) -->
-                <div class="slide-placeholder" style="background: linear-gradient(135deg, #5C3A1E 0%, #8B6914 40%, #3E2415 100%);"></div>
-                <!-- Uncomment when you have the video file:
-                <video autoplay muted loop playsinline>
-                    <source src="assets/videos/hero-dates-harvest.mp4" type="video/mp4">
-                </video>
-                -->
-            </div>
-            <!-- Slide 2: Packaging & Warehouse -->
-            <div class="hero-slide" id="slide-1">
-                <div class="slide-placeholder" style="background: linear-gradient(135deg, #1D3557 0%, #2A9D8F 40%, #3E2415 100%);"></div>
-                <!-- Uncomment when you have the video file:
-                <video autoplay muted loop playsinline>
-                    <source src="assets/videos/hero-packaging.mp4" type="video/mp4">
-                </video>
-                -->
-            </div>
-            <!-- Slide 3: Tunisian Oasis -->
-            <div class="hero-slide" id="slide-2">
-                <div class="slide-placeholder" style="background: linear-gradient(135deg, #2A9D8F 0%, #C8A96E 40%, #5C3A1E 100%);"></div>
-                <!-- Uncomment when you have the video file:
+                <div class="slide-placeholder" style="
+                    background-image: url('assets/images/hero-bg-1.jpg');
+                    background-size: cover;
+                    background-position: center 40%;
+                    background-color: #3E2415;
+                "></div>
+                <!-- Replace with video when available:
                 <video autoplay muted loop playsinline>
                     <source src="assets/videos/hero-oasis.mp4" type="video/mp4">
                 </video>
                 -->
+            </div>
+            <!-- Slide 2: Dates harvest — hero-bg-2.jpg -->
+            <div class="hero-slide" id="slide-1">
+                <div class="slide-placeholder" style="
+                    background-image: url('assets/images/hero-bg-2.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    background-color: #1D3557;
+                "></div>
+            </div>
+            <!-- Slide 3: Packaging / product — hero-bg-3.jpg -->
+            <div class="hero-slide" id="slide-2">
+                <div class="slide-placeholder" style="
+                    background-image: url('assets/images/hero-bg-3.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    background-color: #2A9D8F;
+                "></div>
             </div>
         </div>
 
@@ -1379,8 +1390,8 @@
 
             <div class="products-grid">
                 <div class="product-card fade-up">
-                    <div class="product-image" style="background: linear-gradient(135deg, #F5EDE0 0%, #E8D5B0 100%);">
-                        <i class="fas fa-seedling"></i>
+                    <div class="product-image">
+                        <img src="assets/images/medjool.jpg" alt="Medjool Dates" loading="lazy">
                         <div class="product-image-label">Best Seller</div>
                     </div>
                     <div class="product-info">
@@ -1391,8 +1402,8 @@
                 </div>
 
                 <div class="product-card fade-up">
-                    <div class="product-image" style="background: linear-gradient(135deg, #F5EDE0 0%, #D4C4A8 100%);">
-                        <i class="fas fa-seedling"></i>
+                    <div class="product-image">
+                        <img src="assets/images/deglet-noor.jpg" alt="Deglet Noor Dates" loading="lazy">
                         <div class="product-image-label">Most Popular</div>
                     </div>
                     <div class="product-info">
@@ -1403,8 +1414,8 @@
                 </div>
 
                 <div class="product-card fade-up">
-                    <div class="product-image" style="background: linear-gradient(135deg, #E8D5B0 0%, #C8A96E 100%);">
-                        <i class="fas fa-seedling"></i>
+                    <div class="product-image">
+                        <img src="assets/images/ajwa.jpg" alt="Ajwa Dates" loading="lazy">
                         <div class="product-image-label">Premium</div>
                     </div>
                     <div class="product-info">
@@ -1415,8 +1426,8 @@
                 </div>
 
                 <div class="product-card fade-up">
-                    <div class="product-image" style="background: linear-gradient(135deg, #F5EDE0 0%, #E8D5B0 100%);">
-                        <i class="fas fa-seedling"></i>
+                    <div class="product-image">
+                        <img src="assets/images/sukari.jpg" alt="Sukari Dates" loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3>Sukari Dates</h3>
@@ -1426,8 +1437,8 @@
                 </div>
 
                 <div class="product-card fade-up">
-                    <div class="product-image" style="background: linear-gradient(135deg, #E8D5B0 0%, #D4C4A8 100%);">
-                        <i class="fas fa-seedling"></i>
+                    <div class="product-image">
+                        <img src="assets/images/pitted.jpg" alt="Pitted Dates" loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3>Pitted Dates</h3>
@@ -1437,8 +1448,8 @@
                 </div>
 
                 <div class="product-card fade-up">
-                    <div class="product-image" style="background: linear-gradient(135deg, #D4C4A8 0%, #C8A96E 100%);">
-                        <i class="fas fa-seedling"></i>
+                    <div class="product-image">
+                        <img src="assets/images/khalas.jpg" alt="Sayer and Khalas Dates" loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3>Sayer & Khalas</h3>
